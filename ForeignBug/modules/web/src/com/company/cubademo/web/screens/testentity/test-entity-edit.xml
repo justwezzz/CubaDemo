@@ -6,7 +6,7 @@
     <data>
         <instance id="testEntityDc"
                   class="com.company.cubademo.entity.TestEntity"
-                  view="testEntity-view">
+                  view="_local">
             <loader/>
         </instance>
     </data>

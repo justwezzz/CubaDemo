@@ -6,7 +6,7 @@
     <data readOnly="true">
         <collection id="testEntitiesDc"
                     class="com.company.cubademo.entity.TestEntity"
-                    view="testEntity-view">
+                    view="_local">
             <loader id="testEntitiesDl">
                 <query>
                     <![CDATA[select e from cubademo_TestEntity e]]>
