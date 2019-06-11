@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://browseCaption"
+        focusComponent="testEntitiesTable"
+        messagesPack="com.company.cubademo.web.screens.testentity">
+    <data readOnly="true">
+        <collection id="testEntitiesDc"
+                    class="com.company.cubademo.entity.TestEntity"
+                    view="testEntity-view">
+            <loader id="testEntitiesDl">
+                <query>
+                    <![CDATA[select e from cubademo_TestEntity e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="testEntitiesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="testEntitiesTable"
+                dataLoader="testEntitiesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="testEntitiesTable"
+                    width="100%"
+                    dataContainer="testEntitiesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+<!--                <column id="a"/>-->
+                <column id="b"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="testEntitiesTable.create"/>
+                <button id="editBtn" action="testEntitiesTable.edit"/>
+                <button id="removeBtn" action="testEntitiesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

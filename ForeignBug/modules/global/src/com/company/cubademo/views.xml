@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+    <view entity="cubademo_TestEntity" name="testEntity-view">
+        <property name="b"/>
+    </view>
+    <view entity="cubademo_TestEntity" name="testEntity-view_all" extends="_local">
+        <property name="a" view="_minimal"/>
+    </view>
+</views>

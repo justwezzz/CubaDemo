@@ -1,0 +1,1 @@
+drop index IDX_CUBADEMO_TEST_ENTITY_UNIQ_A ;

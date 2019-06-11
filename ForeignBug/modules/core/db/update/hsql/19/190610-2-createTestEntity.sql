@@ -1,0 +1,1 @@
+create unique index IDX_CUBADEMO_TEST_ENTITY_UNIQ_A on CUBADEMO_TEST_ENTITY (A) ;
